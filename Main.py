@@ -69,10 +69,10 @@ def spela():
             antal_forsok -= 1
 
     # Spelresultat
-    if "_" not in ord:
-        print(f"\nTyvärr, du förlorade! Ordet var: {ordet}")
-    else:
+    if "*" not in ord:
         print(f"\nGrattis! Du vann ordet var: {ordet}")
+    else:
+        print(f"\nTyvärr, du förlorade! Ordet var:  {ordet}")
 
 
 # Starta spelet
