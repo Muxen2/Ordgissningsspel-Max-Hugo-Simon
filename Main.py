@@ -49,7 +49,7 @@ def spela():
     
     ordet = slumpa_ord()
     ord = skapa_ord(ordet)
-    antal_forsok = 7
+    antal_forsok = 9
     gissade_bokstaver = []
 
     # Spelloop
@@ -62,18 +62,17 @@ def spela():
             continue
 
         gissade_bokstaver.append(bokstav)
-
         if uppdatera_gissning(ordet, ord, bokstav):
             print("Rätt gissat!")
         else:
-            print("Fel gissning!")
+            print("Fel gissat!")
             antal_forsok -= 1
 
     # Spelresultat
     if "_" not in ord:
-        print(f"\nGrattis! Du vann ordet var: {ordet}")
-    else:
         print(f"\nTyvärr, du förlorade! Ordet var: {ordet}")
+    else:
+        print(f"\nGrattis! Du vann ordet var: {ordet}")
 
 
 # Starta spelet
