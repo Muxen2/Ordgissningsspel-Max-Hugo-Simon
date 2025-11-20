@@ -31,3 +31,14 @@ def las_in_bokstav():
         if len(bokstav) == 1 and bokstav.isalpha():
             return bokstav
         print("Felaktig inmatning! Du måste skriva EN bokstav.")
+
+def uppdatera_gissning(ordet, golvat_ord, bokstav):
+    
+    #Uppdaterar ordet om bokstaven finns. Returnerar True om bokstaven finns, annars False.
+    
+    hittad = False
+    for i in range(len(ordet)):
+        if ordet[i] == bokstav:
+            golvat_ord[i] = bokstav
+            hittad = True
+    return hittad
