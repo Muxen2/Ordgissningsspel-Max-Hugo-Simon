@@ -32,14 +32,14 @@ def las_in_bokstav():
             return bokstav
         print("Felaktig inmatning! Du måste skriva EN bokstav.")
 
-def uppdatera_gissning(ordet, golvat_ord, bokstav):
+def uppdatera_gissning(ordet, ord, bokstav):
     
     #Uppdaterar ordet om bokstaven finns. Returnerar True om bokstaven finns, annars False.
     
     hittad = False
     for i in range(len(ordet)):
         if ordet[i] == bokstav:
-            golvat_ord[i] = bokstav
+            ord[i] = bokstav
             hittad = True
     return hittad
 
@@ -48,12 +48,12 @@ def spela():
     #Huvudfunktion som styr spelet.
     
     ordet = slumpa_ord()
-    golvat_ord = skapa_ord(ordet)
+    ord = skapa_ord(ordet)
     antal_forsok = 7
     gissade_bokstaver = []
 
     # Spelloop
-    while antal_forsok > 0 and "_" in ord:
+    while antal_forsok > 0 and "*" in ord:
         skriv_status(ord, antal_forsok)
         bokstav = las_in_bokstav()
 
